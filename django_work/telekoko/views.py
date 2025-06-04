@@ -1,7 +1,8 @@
 from django.shortcuts import render
+from django.views import View
 
-# Create your views here.
-from django.http import HttpResponse
+class IndexView(View):
+    def get(self,request):
+          return render(request, "telekoko/index.html")
 
-def index(request):
-    return HttpResponse("Hello, world!")
+index = IndexView.as_view()
