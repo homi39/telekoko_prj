@@ -1,3 +1,15 @@
 from django.contrib import admin
+from .models import Group,User,Feeling
 
-# Register your models here.
+
+@admin.register(Group)
+class EntryAdmin(admin.ModelAdmin):
+    pass
+
+@admin.register(User)
+class UserAdmin(admin.ModelAdmin):
+    pass
+
+@admin.register(Feeling)
+class UserAdmin(admin.ModelAdmin):
+    pass
